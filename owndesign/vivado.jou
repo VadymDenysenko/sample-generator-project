@@ -1,0 +1,219 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Aug  3 17:19:48 2017
+# Process ID: 3146
+# Current directory: /home/v/Desktop/project/owndesign
+# Command line: vivado
+# Log file: /home/v/Desktop/project/owndesign/vivado.log
+# Journal file: /home/v/Desktop/project/owndesign/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project managed_ip_project /home/v/Desktop/project/owndesign/managed_ip_project -part xc7z020clg484-1 -ip
+set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+set_property target_simulator XSim [current_project]
+create_peripheral user.org user sample_generator 1.0 -dir /home/v/Desktop/project/owndesign/ip_repo
+add_peripheral_interface M_AXIS -interface_mode master -axi_type stream [ipx::find_open_core user.org:user:sample_generator:1.0]
+add_peripheral_interface S_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core user.org:user:sample_generator:1.0]
+generate_peripheral [ipx::find_open_core user.org:user:sample_generator:1.0]
+write_peripheral [ipx::find_open_core user.org:user:sample_generator:1.0]
+set_property  ip_repo_paths  /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0 [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name sample_generator_v1_0_project -directory /home/v/Desktop/project/owndesign/managed_ip_project/managed_ip_project.tmp/sample_generator_v1_0_project /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0/component.xml
+update_compile_order -fileset sources_1
+set_property vendor va [ipx::current_core]
+set_property vendor VA [ipx::current_core]
+set_property library home_made [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property enablement_value true [ipx::get_user_parameters C_M_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property enablement_value true [ipx::get_user_parameters C_S_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+ipx::remove_bus_interface m_axis_aresetn [ipx::current_core]
+ipx::remove_bus_interface s_axis_aresetn [ipx::current_core]
+ipx::remove_bus_interface m_axis_aclk [ipx::current_core]
+ipx::remove_bus_interface s_axis_aclk [ipx::current_core]
+ipx::unload_core /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0/component.xml
+ipx::open_ipxact_file /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0/component.xml
+set_property vendor VA [ipx::current_core]
+set_property library hand_made [ipx::current_core]
+set_property enablement_value true [ipx::get_user_parameters C_M_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property enablement_value true [ipx::get_user_parameters C_S_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::remove_bus_interface m_axis_aresetn [ipx::current_core]
+ipx::remove_bus_interface s_axis_aresetn [ipx::current_core]
+ipx::remove_bus_interface m_axis_aclk [ipx::current_core]
+ipx::remove_bus_interface s_axis_aclk [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0
+set_property widget {comboBox} [ipgui::get_guiparamspec -name "C_S_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters C_S_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters C_S_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 2048 [ipx::get_user_parameters C_S_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_S_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_M_AXIS_START_COUNT" -component [ipx::current_core] ]
+set_property value_validation_range_minimum 1 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 2048 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_M_AXIS_TDATA_WIDTH" -component [ipx::current_core] ]
+set_property value_validation_type range_long [ipx::get_user_parameters C_M_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters C_M_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 2048 [ipx::get_user_parameters C_M_AXIS_TDATA_WIDTH -of_objects [ipx::current_core]]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_M_AXIS_START_COUNT" -component [ipx::current_core] ]
+set_property value_validation_range_minimum 0 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 2048 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "C_M_AXIS_START_COUNT" -component [ipx::current_core] ]
+set_property value_validation_range_minimum 1 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 2048 [ipx::get_user_parameters C_M_AXIS_START_COUNT -of_objects [ipx::current_core]]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/v/Desktop/project/owndesign/ip_repo/sample_generator_1.0
+close_project
+close_project
+open_project /home/v/Desktop/project/owndesign/managed_ip_project/managed_ip_project.xpr
+create_ip -name sample_generator -vendor VA -library hand_made -version 1.0 -module_name sample_generator_0 -dir /home/v/Desktop/project/owndesign
+generate_target {instantiation_template} [get_files /home/v/Desktop/project/owndesign/sample_generator_0/sample_generator_0.xci]
+close_project
+create_project project_1 /home/v/Desktop/project/vivado/project_1 -part xc7z020clg484-1
+set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  /home/v/Desktop/project/owndesign/ip_repo [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv VA:hand_made:sample_generator:1.0 sample_generator_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_data_fifo:2.1 axi_data_fifo_0
+endgroup
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0
+endgroup
+set_property location {1 162 -300} [get_bd_cells axis_data_fifo_0]
+set_property location {0.5 -241 -299} [get_bd_cells sample_generator_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+regenerate_bd_layout
+connect_bd_intf_net [get_bd_intf_pins sample_generator_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/axi_dma_0/M_AXI_S2MM" intc_ip "Auto" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+undo
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/axi_dma_0/M_AXI_S2MM" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets sample_generator_0_M_AXIS] [get_bd_intf_nets axis_data_fifo_0_M_AXIS] [get_bd_cells axis_data_fifo_0]
+connect_bd_intf_net [get_bd_intf_pins sample_generator_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+regenerate_bd_layout
+undo
+undo
+undo
+save_bd_design
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins sample_generator_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins sample_generator_0/s_axis_aresetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {1}] [get_bd_cells axis_data_fifo_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
+set_property -dict [list CONFIG.HAS_TLAST {1}] [get_bd_cells axis_data_fifo_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.FIFO_DEPTH {512}] [get_bd_cells axis_data_fifo_0]
+endgroup
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1]
+undo
+undo
+connect_bd_net [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1]
+connect_bd_net [get_bd_pins sample_generator_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins axis_data_fifo_0/m_axis_aclk]
+connect_bd_net [get_bd_pins axis_data_fifo_0/m_axis_aresetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+connect_bd_net [get_bd_pins sample_generator_0/m_axis_aresetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+undo
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+connect_bd_net [get_bd_pins sample_generator_0/m_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_0/m_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+close_project
+source ../tcl/project_1.tcl
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0
+endgroup
+set_property location {0.5 9 437} [get_bd_cells axis_data_fifo_0]
+connect_bd_intf_net [get_bd_intf_pins sample_generator_0/M_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/axi_dma_0/M_AXI_S2MM" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200} CONFIG.PCW_EN_CLK1_PORT {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells axis_data_fifo_0]
+set_property -dict [list CONFIG.FIFO_DEPTH {512} CONFIG.HAS_TLAST {1}] [get_bd_cells axis_data_fifo_0]
+endgroup
+save_bd_design
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+startgroup
+set_property -dict [list CONFIG.IS_ACLK_ASYNC {1}] [get_bd_cells axis_data_fifo_0]
+endgroup
+connect_bd_net [get_bd_pins axis_data_fifo_0/m_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins axis_data_fifo_0/s_axis_aclk]
+connect_bd_net [get_bd_pins sample_generator_0/s_axis_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins sample_generator_0/m_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_0/m_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+startgroup
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_length_width {20} CONFIG.c_include_mm2s {0} CONFIG.c_s2mm_burst_size {128} CONFIG.c_sg_include_stscntrl_strm {0}] [get_bd_cells axi_dma_0]
+endgroup
+startgroup
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins axi_dma_0/s_axis_s2mm_tkeep]
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {4}] [get_bd_cells xlconstant_0]
+endgroup
+regenerate_bd_layout
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+regenerate_bd_layout
+set_property location {4 1203 111} [get_bd_cells ps7_0_axi_periph]
+save_bd_design

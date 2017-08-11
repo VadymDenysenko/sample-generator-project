@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/v/linux_on_sd/vivado_project/project/project.sdk/fsbl/Debug/fsbl.elf
+	/home/v/linux_on_sd/vivado_project/project/project.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+	/home/v/linux_on_sd/vivado_project/project/project.sdk/sg_project/Debug/sg_project.elf
+}
